@@ -112,6 +112,7 @@ scala> df.filter($"age" > 50).agg(count($"passengerid").alias("Nombre_morts_sup_
 * Les IDs des passagers survivants par jointure
 
 ```
+scala> val df2 = spark.read.format("csv").option("header", "true").load("/tmp/data_brut/train.csv")
 scala> df.createOrReplaceTempView("train")
 scala> df2.createOrReplaceTempView("train2")
 scala> val query = spark.sql("SELECT train.passengerid  FROM train, train2  WHERE train.passengerid = train2.passengerid AND train2.survived = 1")
