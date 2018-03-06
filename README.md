@@ -109,7 +109,7 @@ scala> df.filter($"age" > 50).agg(count($"passengerid").alias("Nombre_morts_sup_
 |                 64|
 +-------------------+
 ```
-* Les IDs des passagers survivés par jointure
+* Les IDs des passagers survivant par jointure
 
 ```
 scala> val query = spark.sql("SELECT train.passengerid  FROM train, train2  WHERE train.passengerid = train2.passengerid AND train2.survived = 1")
