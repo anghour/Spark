@@ -56,7 +56,7 @@ only showing top 20 rows
 
 ```
 
-## Opération de SELECT
+## Les requêtes
 * Total de voyageurs par sex
 
 ```
